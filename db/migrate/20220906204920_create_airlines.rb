@@ -1,6 +1,6 @@
-class CreateAirline < ActiveRecord::Migration[6.1]
+class CreateAirlines < ActiveRecord::Migration[6.1]
   def change
-    create_table :airline do |t|
+    create_table :airlines do |t|
       t.integer :airline_id
       t.string :name
       t.string :slug

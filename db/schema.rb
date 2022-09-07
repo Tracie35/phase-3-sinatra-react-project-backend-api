@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_09_06_205013) do
 
-  create_table "airline", force: :cascade do |t|
+  create_table "airlines", force: :cascade do |t|
     t.integer "airline_id"
     t.string "name"
     t.string "slug"
@@ -21,15 +21,15 @@ ActiveRecord::Schema.define(version: 2022_09_06_205013) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "review", force: :cascade do |t|
+  create_table "reviews", force: :cascade do |t|
     t.string "tittle"
     t.string "description"
     t.integer "score"
     t.integer "airline_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["airline_id"], name: "index_review_on_airline_id"
+    t.index ["airline_id"], name: "index_reviews_on_airline_id"
   end
 
-  add_foreign_key "review", "airlines"
+  add_foreign_key "reviews", "airlines"
 end
