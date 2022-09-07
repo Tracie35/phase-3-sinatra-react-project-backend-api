@@ -6,6 +6,7 @@ class CreateReviews < ActiveRecord::Migration[6.1]
       t.integer :score
 
       t.belongs_to :airline, foreign_key: true
+      t.belongs_to :user, foreign_key: true
 
       t.timestamps
     end
