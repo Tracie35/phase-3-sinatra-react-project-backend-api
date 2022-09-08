@@ -1,3 +1,5 @@
-class Review < ActiveRecord::Base
+class User < ActiveRecord::Base
+    has_many :reviews
     
+
 end
